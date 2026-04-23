@@ -11,7 +11,7 @@ export default function Home() {
             B.Tech Student at VIT Vellore. Aspiring ML/Data Science Engineer & Researcher focused on ML first principles, robust system architecture, and advancing the frontiers of AI.
           </p>
           <div style={{ marginTop: "var(--spacing-md)", display: "flex", gap: "1rem" }}>
-            <a href="/resume.pdf" className="btn" download>Download CV</a>
+            <a href="/Jayesh_Resume_Software_CVGC.pdf" className="btn" download="Jayesh_Motwani_Resume.pdf">Download CV</a>
             <Link href="/projects" className="btn btn-outline">View Projects</Link>
           </div>
         </div>
