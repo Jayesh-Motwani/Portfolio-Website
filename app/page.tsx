@@ -1,65 +1,50 @@
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <section className="hero section">
+        <div className="hero-text">
+          <h1>Jayesh<br />Motwani.</h1>
+          <p>
+            B.Tech Student at VIT Vellore. Aspiring ML/Data Science Engineer & Researcher focused on ML first principles, robust system architecture, and advancing the frontiers of AI.
           </p>
+          <div style={{ marginTop: "var(--spacing-md)", display: "flex", gap: "1rem" }}>
+            <a href="/resume.pdf" className="btn" download>Download CV</a>
+            <Link href="/projects" className="btn btn-outline">View Projects</Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="hero-image-container">
+          {/* We wrap the image in a container with a solid background and use hover effects to create a flat shadow illusion */}
+          <Image
+            src="/profile.jpg"
+            alt="Jayesh Motwani"
+            fill
+            sizes="(max-width: 768px) 100vw, 400px"
+            style={{ objectFit: 'cover' }}
+            priority
+          />
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="section">
+        <h2 style={{ fontSize: "2rem", marginBottom: "var(--spacing-lg)" }}>Technical Expertise</h2>
+        <div className="skills-grid">
+          <div className="skill-card">
+            <h3>Languages & Frameworks</h3>
+            <p>Python, C, C++, ROS2, R, FastAPI, PyTorch, ScikitLearn, SciPy, Docker</p>
+          </div>
+          <div className="skill-card">
+            <h3>Core Concepts</h3>
+            <p>OOP, Version Control (Git), MLOps, SQL, Algorithm Design</p>
+          </div>
+          <div className="skill-card">
+            <h3>Machine Learning</h3>
+            <p>Data Science, Deep Learning, Reinforcement Learning, Model Development, Data Analysis, RAG, LLMs, Optimization</p>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
