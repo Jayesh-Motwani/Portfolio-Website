@@ -58,7 +58,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="experience">
         <h2 style={{ fontSize: "2rem", marginBottom: "var(--spacing-lg)" }}>Experience</h2>
         <div style={{ 
           border: "2px solid var(--border-color)", 
