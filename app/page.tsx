@@ -12,7 +12,7 @@ export default function Home() {
           </p>
           <div style={{ marginTop: "var(--spacing-md)", display: "flex", gap: "1rem" }}>
             <a href="/Jayesh_Resume_Software_CVGC.pdf" className="btn" download="Jayesh_Motwani_Resume.pdf">Download CV</a>
-            <Link href="/projects" className="btn btn-outline">View Projects</Link>
+            <Link href="#experience" className="btn btn-outline">View Experience</Link>
           </div>
         </div>
         <div className="hero-image-container">
