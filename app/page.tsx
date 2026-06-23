@@ -32,16 +32,28 @@ export default function Home() {
         <h2 style={{ fontSize: "2rem", marginBottom: "var(--spacing-lg)" }}>Technical Expertise</h2>
         <div className="skills-grid">
           <div className="skill-card">
-            <h3>Languages & Frameworks</h3>
-            <p>Python, C, C++, ROS2, R, FastAPI, PyTorch, ScikitLearn, SciPy, Docker</p>
+            <h3>AI Engineering</h3>
+            <p>AI Agents, Retrieval-Augmented Generation (RAG), Cloud AI Engineering, AI Automation, Agent Evaluation, Prompt Engineering, Hallucination Mitigation</p>
+          </div>
+          <div className="skill-card">
+            <h3>Machine Learning & Deep Learning</h3>
+            <p>Machine Learning, Deep Learning, PyTorch, Scikit-Learn, XGBoost, Variational Autoencoders, Transformer Architectures, CNNs, Representation Learning, Time Series Forecasting</p>
+          </div>
+          <div className="skill-card">
+            <h3>Cloud & Search Infrastructure</h3>
+            <p>Azure AI Search, Azure Functions, Azure Blob Storage, Azure AI Foundry, Search Index Design, Metadata Enrichment Pipelines</p>
+          </div>
+          <div className="skill-card">
+            <h3>Data & Statistics</h3>
+            <p>Mathematics & Optimization, Statistical Learning, Probability & Statistics, Feature Engineering, Model Explainability (SHAP)</p>
+          </div>
+          <div className="skill-card">
+            <h3>Programming & Tools</h3>
+            <p>Python, C++/C, SQL, SciPy, Docker, Version Control (Git), ADO Board</p>
           </div>
           <div className="skill-card">
             <h3>Core Concepts</h3>
-            <p>OOP, Version Control (Git), MLOps, SQL, Algorithm Design</p>
-          </div>
-          <div className="skill-card">
-            <h3>Machine Learning</h3>
-            <p>Data Science, Deep Learning, Reinforcement Learning, Model Development, Data Analysis, RAG, LLMs, Optimization</p>
+            <p>OOP, Algorithm design</p>
           </div>
         </div>
       </section>
