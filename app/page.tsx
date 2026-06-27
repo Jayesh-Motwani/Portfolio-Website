@@ -13,7 +13,7 @@ export default function Home() {
         <div className="hero-text">
           <h1>Jayesh<br />Motwani.</h1>
           <p>
-            B.Tech Student at VIT Vellore. Aspiring ML/Data Science Engineer & Researcher focused on ML first principles, robust system architecture, and advancing the frontiers of AI.
+            ML Engineer & AI Researcher building scalable AI systems with LLMs, deep learning, and cloud infrastructure. Passionate about advancing AI through research and translating novel ideas into production-ready intelligent systems.
           </p>
           <div style={{ marginTop: "var(--spacing-md)", display: "flex", gap: "1rem" }}>
             <a href="/Jayesh_Motwani_Resume.pdf" className="btn" download="Jayesh_Motwani_Resume.pdf">Download CV</a>
@@ -65,17 +65,17 @@ export default function Home() {
 
       <section className="section" id="experience">
         <h2 style={{ fontSize: "2rem", marginBottom: "var(--spacing-lg)" }}>Experience</h2>
-        <div style={{ 
-          border: "2px solid var(--border-color)", 
-          padding: "var(--spacing-lg)", 
-          backgroundColor: "var(--bg-color)" 
+        <div style={{
+          border: "2px solid var(--border-color)",
+          padding: "var(--spacing-lg)",
+          backgroundColor: "var(--bg-color)"
         }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", marginBottom: "var(--spacing-md)" }}>
             <h3 style={{ fontSize: "1.5rem", margin: 0 }}>Product Engineering Intern (AI)</h3>
             <span style={{ fontWeight: 600, fontSize: "1.1rem" }}>2 months</span>
           </div>
           <h4 style={{ fontSize: "1.25rem", margin: "0 0 var(--spacing-md) 0", color: "var(--accent-color)" }}>NewVision Software</h4>
-          
+
           <p style={{ maxWidth: "100%", marginBottom: "var(--spacing-md)" }}>
             Worked on the development of enterprise AI agents for Software Development Life Cycle (SDLC) automation using Azure AI Foundry and Azure AI Search. The role involved designing retrieval systems, building production-grade agent workflows, developing supporting cloud services, and collaborating directly with clients to deliver AI-driven solutions.
           </p>
@@ -105,11 +105,11 @@ export default function Home() {
             <h5 style={{ fontSize: "1.2rem", marginBottom: "var(--spacing-sm)", textTransform: "uppercase" }}>Technologies Used</h5>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
               {["Azure AI Foundry", "Azure AI Search", "Azure Functions", "Python", "Azure DevOps Boards", "Retrieval-Augmented Generation (RAG)", "Prompt Engineering", "Agent Evaluation", "Search Indexing", "Metadata Enrichment", "SDLC Automation"].map(tech => (
-                <span key={tech} style={{ 
-                  padding: "0.5rem 1rem", 
-                  border: "2px solid var(--border-color)", 
+                <span key={tech} style={{
+                  padding: "0.5rem 1rem",
+                  border: "2px solid var(--border-color)",
                   fontWeight: 600,
-                  fontSize: "0.9rem" 
+                  fontSize: "0.9rem"
                 }}>
                   {tech}
                 </span>
