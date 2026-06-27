@@ -119,24 +119,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" id="projects">
-        <h2 style={{ fontSize: "2rem", marginBottom: "var(--spacing-lg)" }}>Projects</h2>
-        <p style={{ marginBottom: "var(--spacing-lg)" }}>A collection of my development and engineering projects.</p>
-
-        {projects.length === 0 ? (
-          <p style={{ color: "#666", fontStyle: "italic" }}>No projects added yet.</p>
-        ) : (
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            {projects.map((item) => (
-              <Link href={`/projects/${item.slug}`} key={item.slug} className="project-card">
-                <h2 style={{ marginBottom: "0.5rem" }}>{item.title}</h2>
-                <p style={{ marginBottom: 0 }}>{item.summary}</p>
-              </Link>
-            ))}
-          </div>
-        )}
-      </section>
-
       <section className="section" id="research">
         <h2 style={{ fontSize: "2rem", marginBottom: "var(--spacing-lg)" }}>Research</h2>
         <p style={{ marginBottom: "var(--spacing-lg)" }}>An overview of my academic and scientific research.</p>
@@ -147,6 +129,24 @@ export default function Home() {
           <div style={{ display: "flex", flexDirection: "column" }}>
             {research.map((item) => (
               <Link href={`/research/${item.slug}`} key={item.slug} className="project-card">
+                <h2 style={{ marginBottom: "0.5rem" }}>{item.title}</h2>
+                <p style={{ marginBottom: 0 }}>{item.summary}</p>
+              </Link>
+            ))}
+          </div>
+        )}
+      </section>
+
+      <section className="section" id="projects">
+        <h2 style={{ fontSize: "2rem", marginBottom: "var(--spacing-lg)" }}>Projects</h2>
+        <p style={{ marginBottom: "var(--spacing-lg)" }}>A collection of my development and engineering projects.</p>
+
+        {projects.length === 0 ? (
+          <p style={{ color: "#666", fontStyle: "italic" }}>No projects added yet.</p>
+        ) : (
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            {projects.map((item) => (
+              <Link href={`/projects/${item.slug}`} key={item.slug} className="project-card">
                 <h2 style={{ marginBottom: "0.5rem" }}>{item.title}</h2>
                 <p style={{ marginBottom: 0 }}>{item.summary}</p>
               </Link>
