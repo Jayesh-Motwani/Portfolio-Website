@@ -1,7 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
+import { getAllItemsData } from "../lib/markdown";
 
 export default function Home() {
+  const allItems = getAllItemsData();
+  const projects = allItems.filter(item => item.type === 'project');
+  const research = allItems.filter(item => item.type === 'research');
+
   return (
     <>
       <section className="hero section">
@@ -11,7 +16,7 @@ export default function Home() {
             B.Tech Student at VIT Vellore. Aspiring ML/Data Science Engineer & Researcher focused on ML first principles, robust system architecture, and advancing the frontiers of AI.
           </p>
           <div style={{ marginTop: "var(--spacing-md)", display: "flex", gap: "1rem" }}>
-            <a href="/Jayesh_Resume_Software_CVGC.pdf" className="btn" download="Jayesh_Motwani_Resume.pdf">Download CV</a>
+            <a href="/Jayesh_Motwani_Resume.pdf" className="btn" download="Jayesh_Motwani_Resume.pdf">Download CV</a>
             <a href="#experience" className="btn btn-outline">View Experience</a>
           </div>
         </div>
@@ -112,6 +117,42 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="section" id="projects">
+        <h2 style={{ fontSize: "2rem", marginBottom: "var(--spacing-lg)" }}>Projects</h2>
+        <p style={{ marginBottom: "var(--spacing-lg)" }}>A collection of my development and engineering projects.</p>
+
+        {projects.length === 0 ? (
+          <p style={{ color: "#666", fontStyle: "italic" }}>No projects added yet.</p>
+        ) : (
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            {projects.map((item) => (
+              <Link href={`/projects/${item.slug}`} key={item.slug} className="project-card">
+                <h2 style={{ marginBottom: "0.5rem" }}>{item.title}</h2>
+                <p style={{ marginBottom: 0 }}>{item.summary}</p>
+              </Link>
+            ))}
+          </div>
+        )}
+      </section>
+
+      <section className="section" id="research">
+        <h2 style={{ fontSize: "2rem", marginBottom: "var(--spacing-lg)" }}>Research</h2>
+        <p style={{ marginBottom: "var(--spacing-lg)" }}>An overview of my academic and scientific research.</p>
+
+        {research.length === 0 ? (
+          <p style={{ color: "#666", fontStyle: "italic" }}>No research added yet.</p>
+        ) : (
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            {research.map((item) => (
+              <Link href={`/research/${item.slug}`} key={item.slug} className="project-card">
+                <h2 style={{ marginBottom: "0.5rem" }}>{item.title}</h2>
+                <p style={{ marginBottom: 0 }}>{item.summary}</p>
+              </Link>
+            ))}
+          </div>
+        )}
       </section>
     </>
   );
